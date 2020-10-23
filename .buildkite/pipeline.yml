@@ -1,0 +1,3 @@
+steps:
+  - command: .buildkite/scripts/complete_build.py
+    label: "complete build"
