@@ -1,0 +1,1 @@
+[![Build status](https://badge.buildkite.com/31a06ac64ab4f09ca5bc5930e21a57889c3f02561260f18ae6.svg)](https://buildkite.com/wellcomecollection/integration)
