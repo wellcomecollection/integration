@@ -1,3 +1,4 @@
 steps:
+  - command: .buildkite/scripts/check_http_200.py https://rank.wellcomecollection.org/api/eval
   - command: .buildkite/scripts/complete_build.py
     label: "complete build"
