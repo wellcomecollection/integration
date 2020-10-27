@@ -1,8 +1,13 @@
 steps:
   - command: .buildkite/scripts/check_http_200.py https://rank.wellcomecollection.org/api/eval
+    label: "check 200: rank_eval"
   - command: .buildkite/scripts/check_http_200.py https://www-stage.wellcomecollection.org/works
+    label: "check 200: experience works"
   - command: .buildkite/scripts/check_http_200.py https://www-stage.wellcomecollection.org
+    label: "check 200: experience homepage"
   - command: .buildkite/scripts/check_http_200.py https://api-stage.wellcomecollection.org/catalogue/v2/works
+    label: "check 200: api works"
   - command: .buildkite/scripts/check_http_200.py https://api-stage.wellcomecollection.org/catalogue/v2/images
+    label: "check 200: api images"
   - command: .buildkite/scripts/complete_build.py
     label: "complete build"
