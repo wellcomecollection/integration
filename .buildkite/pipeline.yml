@@ -1,4 +1,8 @@
 steps:
   - command: .buildkite/scripts/check_http_200.py https://rank.wellcomecollection.org/api/eval
+  - command: .buildkite/scripts/check_http_200.py https://www-stage.wellcomecollection.org/works
+  - command: .buildkite/scripts/check_http_200.py https://www-stage.wellcomecollection.org
+  - command: .buildkite/scripts/check_http_200.py https://api-stage.wellcomecollection.org/catalogue/v2/works
+  - command: .buildkite/scripts/check_http_200.py https://api-stage.wellcomecollection.org/catalogue/v2/images
   - command: .buildkite/scripts/complete_build.py
     label: "complete build"
