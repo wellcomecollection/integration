@@ -5,4 +5,4 @@ WORKDIR /status_check
 
 RUN pip install -r requirements.txt
 
-ENTRYPOINT ["/status_check/check_http_200.py"]
+CMD ["/status_check/check_http_200.py"]

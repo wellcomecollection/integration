@@ -35,16 +35,14 @@ def check_http_200(url):
 
 
 def _build_table(check_results):
-    return [[result['url'], result['status'], result['message']] for result in check_results]
+    return [[result['url'], result['status']] for result in check_results]
 
 
 if __name__ == "__main__":
     check_results = [check_http_200(url) for url in URLS_TO_CHECK]
 
-    table = [[result['url'], result['status']] for result in check_results]
-
-    succeeded = [result for result in check_results if not result['failed']]
-    failed = [result for result in check_results if result['failed']]
+    succeeded = _build_table([result for result in check_results if not result['failed']])
+    failed = _build_table([result for result in check_results if result['failed']])
 
     click.echo(click.style(tabulate(succeeded), fg="green"))
 

@@ -4,7 +4,7 @@ steps:
     plugins:
       - docker-compose#v3.5.0:
           run: status_check
-          entrypoint: ["pytest"]
+          command: ["pytest"]
 
   - label: "200 OK Check"
     plugins:
