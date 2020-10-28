@@ -2,7 +2,6 @@
 # -*- encoding: utf-8
 
 import argparse
-import os
 import sys
 from urllib.request import urlopen
 
