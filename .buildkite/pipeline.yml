@@ -6,6 +6,8 @@ steps:
           run: status_check
           command: ["pytest"]
 
+  - wait
+
   - label: "200 OK Check"
     plugins:
       - docker-compose#v3.5.0:
