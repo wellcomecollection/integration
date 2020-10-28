@@ -1,9 +1,12 @@
 steps:
-  - command: scripts/check_http_200.py https://www-stage.wellcomecollection.org/works
-    label: "check 200: experience works"
-  - command: scripts/check_http_200.py https://www-stage.wellcomecollection.org
-    label: "check 200: experience homepage"
-  - command: scripts/check_http_200.py https://api-stage.wellcomecollection.org/catalogue/v2/works
-    label: "check 200: api works"
-  - command: scripts/check_http_200.py https://api-stage.wellcomecollection.org/catalogue/v2/images
-    label: "check 200: api images"
+  - label: "Testing 200 OK Check"
+    branches: !main
+    plugins:
+      - docker-compose#v3.5.0:
+          run: status_check
+          entrypoint: ["pytest"]
+
+  - label: "200 OK Check"
+    plugins:
+      - docker-compose#v3.5.0:
+          run: status_check
