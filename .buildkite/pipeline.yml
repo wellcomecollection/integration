@@ -1,6 +1,6 @@
 steps:
   - label: "Testing 200 OK Check"
-    branches: !main
+    branches: "!main"
     plugins:
       - docker-compose#v3.5.0:
           run: status_check
