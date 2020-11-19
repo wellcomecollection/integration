@@ -1,4 +1,4 @@
-FROM python:3.8.3
+FROM 760097843905.dkr.ecr.eu-west-1.amazonaws.com/python:3.8.3
 
 ADD . /status_check
 WORKDIR /status_check
