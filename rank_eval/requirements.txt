@@ -1,0 +1,4 @@
+tabulate
+click
+pytest
+requests

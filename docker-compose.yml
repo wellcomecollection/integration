@@ -4,3 +4,7 @@ services:
     image: status_check
     build:
       context: ./status_check
+  rank_eval:
+    image: rank_eval
+    build:
+      context: ./rank_eval
